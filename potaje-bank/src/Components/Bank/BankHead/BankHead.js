@@ -1,17 +1,25 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faDollarSign } from "@fortawesome/free-solid-svg-icons"
 
 const BankHead = (props) => {
   const New = () => {
     console.log("New");
   };
   const Sidebar = () => {
-    console.log("New");
+    if (props.navBar) {
+      props.setNavBar(false);
+    } else {
+      props.setNavBar(true);
+    }
+
   };
   return (
-    <div className="bg-primary d-flex justify-content-around p-4">
-      <button onClick={Sidebar}> Sidebar</button>
-      <p>|$| Real World App</p>
-      <button onClick={New}>$ NEW </button>
+    <div className="headerNav d-flex justify-content-between p-4  shadow">
+      <FontAwesomeIcon onClick={Sidebar} className="navBars" icon={faBars} />
+
+      <h3 className="text-white"> Real World App</h3>
+      <button className="btn-success btn" onClick={New}>$ NEW </button>
     </div>
   );
 };

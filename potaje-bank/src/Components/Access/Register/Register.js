@@ -2,6 +2,14 @@ import React from 'react'
 
 
 function Register(props) {
+
+    const setLogging = () => {
+        if (props.logging) {
+            props.setLogging(false);
+        } else {
+            props.setLogging(true);
+        }
+    }
     return (
         <div className='d-flex  align-content-center justify-content-center mt-5'>
             <div className="inputDiv m-5 p-2 d-flex w-25 flex-column align-content-center justify-content-center">
@@ -20,7 +28,7 @@ function Register(props) {
                 <button onClick={props.signedHandler} className='mt-4 btn btn-primary'>SIGN UP</button>
                 <div className='m-3 p-3 d-flex flex-column justify-content-center align-content-center'>
                     <label className='text-center'>Already have an account?</label>
-                    <button onClick={props.loggingHandler} className='w-50 btn btn-primary m-auto'> SIGN IN</button>
+                    <button onClick={setLogging} className='w-50 btn btn-primary m-auto'> SIGN IN</button>
                 </div>
             </div>
         </div>

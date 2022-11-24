@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .inputDiv input:hover {
   border: 2px solid rgb(98, 98, 175);
   border-radius: 5px;
@@ -11,4 +16,41 @@
 .profileIMG {
   width: 60px;
   height: 60px;
+}
+
+.imagenMyAccount {
+  width: 400px;
+  height: 300px;
+}
+
+.headerNav {
+  background-color: rgb(92, 92, 223);
+}
+
+
+.botonesSideBar:hover {
+  cursor: pointer;
+  border-top: 0.5px solid black;
+
+}
+
+.botonesSideBar:focus {
+  border: 5px;
+}
+
+.navBars {
+  width: 30px;
+  height: 40px;
+}
+
+.navBars:hover {
+  cursor: pointer;
+}
+
+.bgMenu {
+
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: rgb(240, 236, 236);
 }

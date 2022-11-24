@@ -37,7 +37,26 @@ const accounts = [
       },
     ],
   },
-  { name: "Account 3 ", IdBank: "qwhib1qwd" },
+  {
+    name: "Account 3 ", IdBank: "qwhib1qwd",
+    IdBank: "yruewqwe",
+    transactions: [
+      {
+        sender: "Edgar",
+        receiver: "Recierver",
+        amount: 123123.23,
+        likes: 21,
+        idTrasaction: "hgfhgf",
+      },
+      {
+        sender: "Edgar",
+        receiver: "Recierver2",
+        amount: -1.23,
+        likes: 1,
+        idTrasaction: "hgfhgf",
+      },
+    ],
+  },
 ];
 
 
@@ -47,6 +66,7 @@ function App() {
   // state that determinates if user wants to log or register
   const [logging, setLogging] = useState(false)
   const [bodyShow, setBodyShow] = useState("Home");
+  const [navBar, setNavBar] = useState(true)
 
   const signedHandler = () => {
     if (signed) {
@@ -57,25 +77,22 @@ function App() {
 
   }
 
-  const loggingHandler = () => {
-    if (logging) {
-      setLogging('false');
-    } else {
-      setLogging('true');
-    }
-  }
+
+
 
   let show = "";
 
   if (signed) {
-    show = (
-      <div className="App">
+
+    if (navBar) {
+      show = (
+
         <div className="row">
-          <div className="col-3">
+          <div className="col-2 sideBar">
             <BankSidebar user={user} setBodyShow={setBodyShow} />
           </div>
-          <div className="col-9">
-            <BankHead />
+          <div className="col ">
+            <BankHead setNavBar={setNavBar} navBar={navBar} />
             <BankBody
               user={user}
               accounts={accounts}
@@ -84,15 +101,32 @@ function App() {
             />
           </div>
         </div>
-      </div>
-    );
+
+      );
+    } else {
+      show = (
+
+        <div className="row ">
+          <div className="col ">
+            <BankHead setNavBar={setNavBar} />
+            <BankBody
+              user={user}
+              accounts={accounts}
+              show={bodyShow}
+              setBodyShow={setBodyShow}
+            />
+          </div>
+        </div>
+
+      );
+    }
   } else if (logging) {
 
 
     console.log(logging + "logging")
     show = (
       <div className="App">
-        <Logging loggingHandler={loggingHandler} signedHandler={signedHandler}></Logging>
+        <Logging setLogging={setLogging} logging={logging} signedHandler={signedHandler}></Logging>
       </div>
     )
 
@@ -101,7 +135,7 @@ function App() {
     console.log(logging + "logging false")
     show = (
       <div className="App">
-        <Register loggingHandler={loggingHandler} signedHandler={signedHandler}></Register>
+        <Register setLogging={setLogging} logging={logging} signedHandler={signedHandler}></Register>
       </div>
     )
   }
