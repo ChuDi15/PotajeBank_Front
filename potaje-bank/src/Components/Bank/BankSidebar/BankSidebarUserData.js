@@ -2,14 +2,19 @@ import React from 'react';
 
 const BankSidebarUserData = (props) => {
   return (
-    <div>
-      <img src={props.img} />
-      <div>
-        <p>
+    <div >
+      <div className='d-flex '>
+        <div>
+          <img className='profileIMG ' src={props.img} />
+        </div>
+        <div className='p-2 ms-3'>
           {props.name} {props.surname}
-        </p>
-        <p>@{props.username}</p>
+          <p>@{props.username}</p>
+        </div>
+
       </div>
+
+
     </div>
   );
 }

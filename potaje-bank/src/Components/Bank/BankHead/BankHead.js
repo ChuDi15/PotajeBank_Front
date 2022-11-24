@@ -8,7 +8,7 @@ const BankHead = (props) => {
     console.log("New");
   };
   return (
-    <div>
+    <div className="bg-primary d-flex justify-content-around p-4">
       <button onClick={Sidebar}> Sidebar</button>
       <p>|$| Real World App</p>
       <button onClick={New}>$ NEW </button>

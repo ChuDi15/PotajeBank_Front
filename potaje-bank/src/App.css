@@ -7,3 +7,8 @@
   border: 2px solid rgb(201, 199, 199);
   border-radius: 10px;
 }
+
+.profileIMG {
+  width: 60px;
+  height: 60px;
+}
