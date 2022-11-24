@@ -1,22 +1,26 @@
 import React, {useState} from 'react';
-
-const BankBody = () => {
+import BankBodyNotifications from './BankBodyNotifications/BankBodyNotifications';
+import BankBodyHome from "./BankBodyHome/BankBodyHome";
+import BankBodyMyAccount from "./BankBodyMyAccount/BankBodyMyAccount";
+import BankBodyBankAccounts from './BankBodyBankAccounts/BankBodyBankAccounts';
+const BankBody = (props) => {
     
-    //const [show, setShow] = useState("home");
-    //var bodyShow;
-    //if (show === "home") {
-    //  bodyShow = <Home />;
-    //} else if (show === "myAccount") {
-    //  bodyShow = <myAccount />;
-    //} else if (show === "bankAccounts") {
-    //  bodyShow = <Home />;
-    //}else if (show === "notifications") {
-    //  bodyShow = <Home />;
-    //}
+    var bodyShow;
+    if (props.show === "home") {
+      bodyShow = <BankBodyHome />;
+    } else if (props.show === "myAccount") {
+      bodyShow = <BankBodyMyAccount user={props.user}/>;
+    } else if (props.show === "bankAccounts") {
+      bodyShow = <BankBodyBankAccounts accounts={props.accounts}/>;
+    } else if (props.show === "notifications") {
+      bodyShow = <BankBodyNotifications />;
+    }else {
+        bodyShow = <div>Error. Anything selected </div>;
+    }
 
     return (
         <div>
-            hola
+            {bodyShow}
         </div>
     );
 }

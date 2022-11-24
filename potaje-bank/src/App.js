@@ -11,10 +11,15 @@ const user = {
   surname: "J",
   username: "katharina_bernier",
   amount: "1,681.37",
+  phonenumber: 3423432234,
+  email: "wqeqw@fqew.com"
 };
 
 
-
+const accounts = [
+  { name: "Account 1 ", IdBank: "qwhibiqwd" },
+  { name: "Account 3 ", IdBank: "qwhib1qwd" }
+];
 
 
 function App() {
@@ -52,9 +57,9 @@ function App() {
           </div>
           <div className="col-9">
             <BankHead />
-            <BankBody />
+            <BankBody user={user} accounts={accounts} show="bankAccounts" />
           </div>
-        ></div>
+        </div>
       </div>
     )
   } else if (logging) {
