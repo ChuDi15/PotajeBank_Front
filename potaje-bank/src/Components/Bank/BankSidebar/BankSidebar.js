@@ -4,19 +4,19 @@ import BankSidebarUser from './BankSidebarUser';
 
 const BankSidebar = (props) => {
     const Home = () => {
-        console.log("Home");
+        props.setBodyShow("Home");
     }
     const MyAccount = () => {
-        console.log("MyAccount");
+        props.setBodyShow("MyAccount");
     }
     const BankAccounts = () => {
-        console.log("BankAccounts");
+        props.setBodyShow("BankAccounts");
     }
     const Notifications = () => {
-        console.log("Notifications");
+        props.setBodyShow("Notifications");
     }
     const Logout = () => {
-        console.log("Logout");
+        props.setBodyShow("Logout");
     }
     return (
       <div>
