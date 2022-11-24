@@ -17,8 +17,27 @@ const user = {
 
 
 const accounts = [
-  { name: "Account 1 ", IdBank: "qwhibiqwd" },
-  { name: "Account 3 ", IdBank: "qwhib1qwd" }
+  {
+    name: "Account 1 ",
+    IdBank: "qwhibiqwd",
+    transactions: [
+      {
+        sender: "Edgar",
+        receiver: "Recierver",
+        amount: 123123.23,
+        likes: 21,
+        idTrasaction: "dwnoqwdnq",
+      },
+      {
+        sender: "Edgar",
+        receiver: "Recierver2",
+        amount: -1.23,
+        likes: 1,
+        idTrasaction: "dwnoq1wdnq",
+      },
+    ],
+  },
+  { name: "Account 3 ", IdBank: "qwhib1qwd" },
 ];
 
 
@@ -27,7 +46,7 @@ function App() {
   const [signed, setSigned] = useState(false)
   // state that determinates if user wants to log or register
   const [logging, setLogging] = useState(false)
-
+  const [bodyShow, setBodyShow] = useState("Home");
 
   const signedHandler = () => {
     if (signed) {
@@ -53,15 +72,20 @@ function App() {
       <div className="App">
         <div className="row">
           <div className="col-3">
-            <BankSidebar user={user} />
+            <BankSidebar user={user} setBodyShow={setBodyShow} />
           </div>
           <div className="col-9">
             <BankHead />
-            <BankBody user={user} accounts={accounts} show="bankAccounts" />
+            <BankBody
+              user={user}
+              accounts={accounts}
+              show={bodyShow}
+              setBodyShow={setBodyShow}
+            />
           </div>
         </div>
       </div>
-    )
+    );
   } else if (logging) {
 
 

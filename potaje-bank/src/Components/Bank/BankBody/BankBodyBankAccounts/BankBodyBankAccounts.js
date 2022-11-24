@@ -4,10 +4,14 @@ import BankBodyBankAccountsList from './BankBodyBankAccountsList';
 
 const BankBodyBankAccounts = (props) => {
     return (
-        <div>
-            <BankBodyBankAccountsHead/>
-            <BankBodyBankAccountsList accounts={props.accounts}/>
-        </div>
+      <div>
+        <BankBodyBankAccountsHead />
+        <BankBodyBankAccountsList
+          accounts={props.accounts}
+          setSelectedAccount={props.setSelectedAccount}
+          setBodyShow={props.setBodyShow}
+        />
+      </div>
     );
 }
 
