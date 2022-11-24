@@ -10,17 +10,24 @@ const user = {
   surname: "J",
   username: "katharina_bernier",
   amount: "1,681.37",
+  phonenumber: 3423432234,
+  email: "wqeqw@fqew.com"
 };
-
+const accounts = [
+  { name: "Account 1 ", IdBank: "qwhibiqwd" },
+  { name: "Account 3 ", IdBank: "qwhib1qwd" }
+];
 function App() {
-  return <div className="App">
-    <Children></Children>
-    <BankSidebar user={user} />
-    <div>
-      <BankHead />
-      <BankBody />
+  return (
+    <div className="App">
+      <Children></Children>
+      <BankSidebar user={user} />
+      <div>
+        <BankHead />
+        <BankBody user={user} accounts={accounts} show="bankAccounts"/>
+      </div>
     </div>
-  </div>;
+  );
 }
 
 export default App;
