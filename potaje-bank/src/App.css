@@ -76,7 +76,12 @@
   width: 75px;
 }
 
+/* Bank transactions */
 
+.transactionImage {
+  width: 80px;
+  height: 60px;
+}
 
 /* Bank Accouts Account */
 .transactionBankAccountsAccountNumber {

@@ -1,4 +1,6 @@
 import React from 'react';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const BankBodyAccountTransaction = (props) => {
   const goToTransaction = () => {
@@ -18,11 +20,13 @@ const BankBodyAccountTransaction = (props) => {
         <img className='imgTest' src="https://picsum.photos/id/1020/600/400" alt="" />
       </div>
       <div className='d-flex justify-content-between align-items-center p-2 col-10'>
-        <div className='d-flex flex-column '>
+        <div className=''>
 
           <h6 className='m-0'>{props.transaction.sender} <b className='text-muted non-bold'>paid</b> {props.transaction.receiver}</h6>
           <p className='m-0 text-muted non-bold'>Payment: {props.transaction.idTransaction}</p>
-          <p className='m-0 text-muted non-bold'>Likes: {props.transaction.likes}</p>
+          <div className='d-flex '>
+            <p>Likes: {props.transaction.likes}</p> <FontAwesomeIcon className='p-1' icon={faThumbsUp} />
+          </div>
 
         </div>
         <div className='transactionBankAccountsAccountNumber p-2'>
