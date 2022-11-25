@@ -143,7 +143,7 @@ function App() {
 
         <div className="row">
           <div className="col-2 sideBar">
-            <BankSidebar user={user} setBodyShow={setBodyShow} />
+            <BankSidebar setSign={setSigned} setLogging={setLogging} user={user} setBodyShow={setBodyShow} />
           </div>
           <div className="col ">
             <BankHead setNavBar={setNavBar} navBar={navBar} />

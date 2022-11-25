@@ -16,7 +16,8 @@ const BankSidebar = (props) => {
     props.setBodyShow("Notifications");
   }
   const Logout = () => {
-    props.setBodyShow("Logout");
+    props.setSign(false);
+    props.setLogging(true)
   }
   return (
     <div className='sizeDiv'>

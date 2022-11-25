@@ -40,13 +40,6 @@ const BankSidebarOptionList = (props) => {
         weight4 = "bold";
         weight5 = "";
         break;
-      case 5:
-        weight1 = "";
-        weight2 = "";
-        weight3 = "";
-        weight4 = "";
-        weight5 = "bold";
-        break;
 
     }
   }
@@ -84,7 +77,6 @@ const BankSidebarOptionList = (props) => {
       <div style={{ fontWeight: weight5 }} className='d-flex btn'>
         <FontAwesomeIcon icon={faRightFromBracket} className="w-25 m-auto" />
         <BankSidebarOption name="Logout" onClick={() => {
-          weightHandler(5);
           props.Logout();
         }} />
       </div>
