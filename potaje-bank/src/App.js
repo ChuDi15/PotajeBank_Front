@@ -5,6 +5,12 @@ import BankBody from "./Components/Bank/BankBody/BankBody";
 import Register from './Components/Access/Register/Register';
 import Logging from "./Components/Access/Logging/Logging";
 import { useState } from "react";
+import BankBodyNotifications from "./Components/Bank/BankBody/BankBodyNotifications/BankBodyNotifications";
+import BankBodyHome from "./Components/Bank/BankBody/BankBodyHome/BankBodyHome";
+import BankBodyMyAccount from "./Components/Bank/BankBody/BankBodyMyAccount/BankBodyMyAccount";
+import BankBodyBankAccounts from "./Components/Bank/BankBody/BankBodyBankAccounts/BankBodyBankAccounts";
+import BankBodyAccount from "./Components/Bank/BankBody/BankBodyAccount/BankBodyAccount";
+import BankBodyTransaction from "./Components/Bank/BankBody/BankBodyTransaction/BankBodyTransaction";
 
 const user = {
   name: "Edgar",
@@ -25,49 +31,56 @@ const accounts = [
         sender: "Edgar",
         receiver: "Recierver",
         amount: 123123.23,
+        date: new Date(2022, 7, 14),
         likes: 21,
-        idTrasaction: "dwnoqwdnq",
+        idTransaction: "dwnoqwdnq",
       },
       {
         sender: "Edgar",
         receiver: "Recierver2",
         amount: -1.23,
+        date: new Date(2022, 3, 5),
         likes: 1,
-        idTrasaction: "dwnoq1wdnq",
+        idTransaction: "dwnoq1wdnq",
       },
       {
         sender: "Luis",
         receiver: "Recierver3",
         amount: 61.233,
+        date: new Date(2021, 3, 5),
         likes: 4,
-        idTrasaction: "fdsf",
+        idTransaction: "fdsf",
       },
       {
         sender: "Jose",
         receiver: "Recierver4",
         amount: 811.23,
+        date: new Date(2019, 3, 5),
         likes: 3,
-        idTrasaction: "hgf",
+        idTransaction: "hgf",
       },
     ],
   },
   {
-    name: "Account 3 ", IdBank: "qwhib1qwd",
+    name: "Account 3 ",
+    IdBank: "qwhib1qwd",
     IdBank: "yruewqwe",
     transactions: [
       {
         sender: "Edgar",
         receiver: "Recierver",
         amount: 123123.23,
+        date: new Date(2020, 3, 5),
         likes: 21,
-        idTrasaction: "hgfhgf",
+        idTransaction: "hgfhgf",
       },
       {
         sender: "Edgar",
         receiver: "Recierver2",
         amount: -1.23,
+        date: new Date(2022, 3, 5),
         likes: 1,
-        idTrasaction: "hgfhgf",
+        idTransaction: "hgfhgf",
       },
     ],
   },
@@ -90,12 +103,39 @@ function App() {
     }
 
   }
-
-
-
-
-  let show = "";
-
+  const [selectedAccount, setSelectedAccount] = useState(null);
+  const [selectedTransaction, setSelectedTrasaction] = useState(null);
+  
+  
+  let bodyShowText ="";
+  if (bodyShow === "Home") {
+    bodyShowText = <BankBodyHome />;
+  } else if (bodyShow === "MyAccount") {
+    bodyShowText = <BankBodyMyAccount user={user} />;
+  } else if (bodyShow === "BankAccounts") {
+    bodyShowText = (
+      <BankBodyBankAccounts
+        accounts={accounts}
+        setSelectedAccount={setSelectedAccount}
+        setBodyShow={setBodyShow}
+      />
+    );
+  } else if (bodyShow === "Notifications") {
+    bodyShowText = <BankBodyNotifications />;
+  } else if (bodyShow === "Account") {
+    bodyShowText = (
+      <BankBodyAccount
+        account={selectedAccount}
+        setBodyShow={setBodyShow}
+        setSelectedTrasaction={setSelectedTrasaction}
+      />
+    );
+  } else if (bodyShow === "Transaction") {
+    bodyShowText = <BankBodyTransaction transaction={selectedTransaction} />;
+  } else {
+    bodyShowText = <div>Error. Anything selected </div>;
+  }
+let show = "";
   if (signed) {
 
     if (navBar) {
@@ -108,10 +148,7 @@ function App() {
           <div className="col ">
             <BankHead setNavBar={setNavBar} navBar={navBar} />
             <BankBody
-              user={user}
-              accounts={accounts}
-              show={bodyShow}
-              setBodyShow={setBodyShow}
+              bodyShow={bodyShowText}
             />
           </div>
         </div>
@@ -119,10 +156,9 @@ function App() {
       );
     } else {
       show = (
-
         <div className="row ">
           <div className="col ">
-            <BankHead setNavBar={setNavBar} />
+            <BankHead setNavBar={setNavBar} navBar={navBar} />
             <BankBody
               user={user}
               accounts={accounts}
@@ -131,7 +167,6 @@ function App() {
             />
           </div>
         </div>
-
       );
     }
   } else if (logging) {
