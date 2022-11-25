@@ -105,9 +105,9 @@ function App() {
   }
   const [selectedAccount, setSelectedAccount] = useState(null);
   const [selectedTransaction, setSelectedTrasaction] = useState(null);
-  
-  
-  let bodyShowText ="";
+
+
+  let bodyShowText = "";
   if (bodyShow === "Home") {
     bodyShowText = <BankBodyHome />;
   } else if (bodyShow === "MyAccount") {
@@ -135,7 +135,7 @@ function App() {
   } else {
     bodyShowText = <div>Error. Anything selected </div>;
   }
-let show = "";
+  let show = "";
   if (signed) {
 
     if (navBar) {
@@ -160,10 +160,7 @@ let show = "";
           <div className="col ">
             <BankHead setNavBar={setNavBar} navBar={navBar} />
             <BankBody
-              user={user}
-              accounts={accounts}
-              show={bodyShow}
-              setBodyShow={setBodyShow}
+              bodyShow={bodyShowText}
             />
           </div>
         </div>

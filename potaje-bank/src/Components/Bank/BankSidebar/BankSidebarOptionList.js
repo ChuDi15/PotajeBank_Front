@@ -3,11 +3,11 @@ import BankSidebarOption from './BankSidebarOption';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell, faBuildingColumns, faHouse, faRightFromBracket, faUser } from "@fortawesome/free-solid-svg-icons"
 
-
+let weight1, weight2, weight3, weight4, weight5;
 const BankSidebarOptionList = (props) => {
 
 
-  let weight1, weight2, weight3, weight4, weight5;
+
   const weightHandler = (num) => {
     console.log(num + "hola")
     switch (num) {
