@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faDollarSign } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faDollarSign, faMoneyCheckDollar } from "@fortawesome/free-solid-svg-icons"
 
 const BankHead = (props) => {
   const New = () => {
@@ -17,10 +17,16 @@ const BankHead = (props) => {
   return (
     <div className="headerNav d-flex justify-content-between p-4  shadow">
       <FontAwesomeIcon onClick={Sidebar} className="navBars" icon={faBars} />
+      <div className="d-flex m-2">
+        <FontAwesomeIcon icon={faMoneyCheckDollar} className="text-white dollarCard" />
+        <h3 className="text-white "> Real World App</h3>
+      </div>
 
-      <h3 className="text-white"> Real World App</h3>
-      <button className="btn-success btn" onClick={New}>$ NEW </button>
+      <button className="botonNew shadow " onClick={New}>
+        <FontAwesomeIcon icon={faDollarSign} className="text-white dollarSignNew" />
+        NEW </button>
     </div>
+
   );
 };
 

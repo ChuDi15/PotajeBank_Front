@@ -15,7 +15,7 @@ const BankBodyBankAccountsList = (props) => {
   } else {
     show = <h3>No accounts. Create one!</h3>;
   }
-  return show;
+  return <div className="d-flex flex-column m-3">{show}</div>;
 };
 
 export default BankBodyBankAccountsList;

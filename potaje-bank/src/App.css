@@ -13,10 +13,7 @@
   border-radius: 10px;
 }
 
-.profileIMG {
-  width: 60px;
-  height: 60px;
-}
+
 
 .imagenMyAccount {
   width: 400px;
@@ -53,4 +50,108 @@
   padding: 0;
   min-height: 100vh;
   background-color: rgb(240, 236, 236);
+}
+
+.botonNew {
+  background-color: rgb(79, 202, 116);
+  border: 0;
+  padding: 10px;
+  width: 100px;
+  color: white;
+  border-radius: 5px;
+}
+
+.dollarCard {
+  height: 37px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.dollarSignNew {
+  height: 18px;
+  margin-right: 5px;
+}
+
+.imgTest {
+  width: 75px;
+}
+
+
+
+/* Bank Accouts Account */
+.transactionBankAccountsAccountNumber {
+  width: 150px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+.scrollableDiv {
+  overflow-y: scroll;
+  max-height: 50vh;
+
+}
+
+.sizeDiv {
+  width: 16.7vw;
+}
+
+.paidTextBankAccount {
+  white-space: nowrap;
+}
+
+.non-bold {
+  font-weight: 100
+}
+
+/* USER SIDE BAR */
+.sideBarText {
+  font-size: 1.2vw;
+}
+
+
+.sideBarDivHover:hover .sideBarText {
+  transition: all 0.2s ease;
+
+  font-weight: bold;
+}
+
+.sideBarDivHover:active .sideBarText {
+  transition: all 0.2s ease;
+
+  font-weight: bold;
+}
+
+
+.profileIMG {
+  width: 60px;
+  height: 60px;
+}
+
+.responsiveUserData {
+  display: flex;
+  flex-direction: row;
+}
+
+.nameUserData {
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.amountBalance {
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 1200px) {
+  .responsiveUserData {
+    flex-direction: column;
+  }
+
+  .nameUserData {
+    padding: 0;
+    margin: 0;
+  }
 }

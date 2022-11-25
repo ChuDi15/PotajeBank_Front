@@ -35,6 +35,20 @@ const accounts = [
         likes: 1,
         idTrasaction: "dwnoq1wdnq",
       },
+      {
+        sender: "Luis",
+        receiver: "Recierver3",
+        amount: 61.233,
+        likes: 4,
+        idTrasaction: "fdsf",
+      },
+      {
+        sender: "Jose",
+        receiver: "Recierver4",
+        amount: 811.23,
+        likes: 3,
+        idTrasaction: "hgf",
+      },
     ],
   },
   {

@@ -3,7 +3,7 @@ import BankSidebarUserData from './BankSidebarUserData';
 import BankSidebarUserAmount from "./BankSidebarUserAmount";
 const BankSidebarUser = (props) => {
   return (
-    <div className='p-4'>
+    <div className='p-3'>
       <BankSidebarUserData
         name={props.user.name}
         surname={props.user.surname}

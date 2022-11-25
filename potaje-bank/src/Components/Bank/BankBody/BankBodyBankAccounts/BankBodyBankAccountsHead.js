@@ -5,9 +5,9 @@ const BankBodyBankAccountsHead = () => {
         console.log("Create new account");
     }
     return (
-        <div>
-            <h2>Bank Accounts</h2>
-            <button onClick={createBankAccount}>CREATE</button>
+        <div className='d-flex flex-row justify-content-between'>
+            <h2 className='text-primary'>Bank Accounts</h2>
+            <button className='btn btn-primary' onClick={createBankAccount}>CREATE</button>
         </div>
     );
 }
