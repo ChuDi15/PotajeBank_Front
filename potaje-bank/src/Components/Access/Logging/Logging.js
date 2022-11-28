@@ -10,16 +10,15 @@ function Logging(props) {
         }
 
     }
-    
     return (
         <div className='d-flex  align-content-center justify-content-center mt-5'>
             <div className="inputDiv m-5 p-2 d-flex w-25 flex-column align-content-center justify-content-center">
                 <h1 className='text-center'>Sign in</h1>
                 <label>Username</label>
-                <input type="text"></input>
+                <input type="text" data-test='username-input'></input>
                 <label>Password</label>
-                <input type="password"></input>
-                <button onClick={props.signedHandler} className='mt-4 btn btn-primary'>SIGN IN</button>
+                <input type="password" data-test='password-input'></input>
+                <button onClick={props.signedHandler} className='mt-4 btn btn-primary' data-test='Login'>SIGN IN</button>
                 <div className='m-3 p-3 d-flex flex-column justify-content-center align-content-center'>
                     <label className='text-center'> Click here to create an account</label>
                     <button onClick={setLogging} className='w-50 btn btn-primary m-auto'> SIGN UP</button>
