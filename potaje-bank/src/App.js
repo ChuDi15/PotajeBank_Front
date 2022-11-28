@@ -64,7 +64,6 @@ const accounts = [
   {
     name: "Account 3 ",
     IdBank: "qwhib1qwd",
-    IdBank: "yruewqwe",
     transactions: [
       {
         sender: "Edgar",
