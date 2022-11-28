@@ -1,5 +1,5 @@
-import React from "react";
-import BankBodyBankAccountsElement from "./BankBodyBankAccountsElement";
+import React from 'react';
+import BankBodyBankAccountsElement from './BankBodyBankAccountsElement';
 
 const BankBodyBankAccountsList = (props) => {
   var show;
@@ -15,7 +15,7 @@ const BankBodyBankAccountsList = (props) => {
   } else {
     show = <h3>No accounts. Create one!</h3>;
   }
-  return <div className="d-flex flex-column m-3">{show}</div>;
+  return <div className='d-flex flex-column m-3'>{show}</div>;
 };
 
 export default BankBodyBankAccountsList;

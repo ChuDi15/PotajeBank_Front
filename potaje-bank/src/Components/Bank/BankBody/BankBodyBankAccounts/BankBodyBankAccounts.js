@@ -4,15 +4,11 @@ import BankBodyBankAccountsHead from './BankBodyBankAccountsHead';
 import BankBodyBankAccountsList from './BankBodyBankAccountsList';
 
 const BankBodyBankAccounts = (props) => {
-
-
   const [bolCreate, setBolCreate] = useState(false);
 
   if (!bolCreate) {
-
     return (
       <div className='p-4 d-flex flex-column'>
-
         <BankBodyBankAccountsHead setBolCreate={setBolCreate} />
 
         <BankBodyBankAccountsList
@@ -23,19 +19,14 @@ const BankBodyBankAccounts = (props) => {
       </div>
     );
   } else {
-
     return (
       <div className='p-4 d-flex flex-column'>
-
-        <BankBodyBankAccountsCreate setBolCreate={setBolCreate}>
-
-        </BankBodyBankAccountsCreate>
+        <BankBodyBankAccountsCreate
+          setBolCreate={setBolCreate}
+        ></BankBodyBankAccountsCreate>
       </div>
     );
   }
-
-
-
-}
+};
 
 export default BankBodyBankAccounts;

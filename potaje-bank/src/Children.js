@@ -1,10 +1,10 @@
-import {useState} from "react";
+import { useState } from 'react';
 
-import loginRegisterContent from "./Services/Helper";
+import loginRegisterContent from './Services/Helper';
 function Children(props) {
   let data = props.data;
-  
-  const [bodyShow, setBodyShow] = useState("Home");
+
+  const [bodyShow, setBodyShow] = useState('Home');
   const [selectedAccount, setSelectedAccount] = useState(null);
   const [selectedTransaction, setSelectedTrasaction] = useState(null);
 
@@ -16,20 +16,17 @@ function Children(props) {
     selectedTransaction: selectedTransaction,
     setSelectedTrasaction: setSelectedTrasaction,
   };
-  
-  
-  
+
   const [signed, setSigned] = useState(false);
   const [logging, setLogging] = useState(false);
 
   const [navBar, setNavBar] = useState(true);
 
-
   const signedHandler = () => {
     if (signed) {
-      setSigned("false");
+      setSigned('false');
     } else {
-      setSigned("true");
+      setSigned('true');
     }
   };
 
@@ -44,6 +41,15 @@ function Children(props) {
     bodyStates: bodyStates,
   };
 
+  const calculateAmount = (accounts) => {
+    let c = 0;
+    for (let a of accounts) {
+      c += a.amount;
+    }
+
+    console.log(c);
+    return c;
+  };
   let show = loginRegisterContent(data, states);
 
   return show;
