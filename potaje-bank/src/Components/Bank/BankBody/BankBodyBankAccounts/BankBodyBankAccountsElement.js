@@ -14,7 +14,7 @@ const BankBodyBankAccountsElement = (props) => {
       <h5 className='m-3 text-primary'>{props.account.name}</h5>
       <div>
         <button className='btn btn-light shadow m-2' onClick={goToAccount}>GO TO</button>
-        <button className='btn btn-light shadow' onClick={deleteAccount}>DELETE</button>
+        <button className='btn btn-light shadow' onClick={deleteAccount} data-test='Delete-Account'>DELETE</button>
       </div>
     </div>
   );
