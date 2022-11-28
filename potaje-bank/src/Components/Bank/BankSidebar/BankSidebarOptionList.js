@@ -9,7 +9,6 @@ const BankSidebarOptionList = (props) => {
 
 
   const weightHandler = (num) => {
-    console.log(num + "hola")
     switch (num) {
       case 1:
         weight1 = "bold";
@@ -17,7 +16,6 @@ const BankSidebarOptionList = (props) => {
         weight3 = "";
         weight4 = "";
         weight5 = "";
-        console.log(weight1)
         break;
       case 2:
         weight1 = "";

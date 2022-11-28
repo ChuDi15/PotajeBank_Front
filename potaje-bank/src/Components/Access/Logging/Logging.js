@@ -10,6 +10,7 @@ function Logging(props) {
         }
 
     }
+    
     return (
         <div className='d-flex  align-content-center justify-content-center mt-5'>
             <div className="inputDiv m-5 p-2 d-flex w-25 flex-column align-content-center justify-content-center">
