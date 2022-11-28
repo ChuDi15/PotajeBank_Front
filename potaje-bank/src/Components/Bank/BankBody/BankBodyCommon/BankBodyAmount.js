@@ -11,7 +11,7 @@ const BankBodyAmount = (props) => {
     classN = "text-success";
   }
   return (
-    <div className="d-flex align-items-center p-2">
+    <div className="d-flex align-items-center p-2 mb-5">
       <h5 className={classN}>{amount}</h5>
     </div>
   );

@@ -27,9 +27,13 @@ const BankBodyBankAccounts = (props) => {
     return (
       <div className='p-4 d-flex flex-column'>
 
-        <BankBodyBankAccountsCreate setBolCreate={setBolCreate}>
+        <BankBodyBankAccountsCreate
+          setBolCreate={setBolCreate}
 
-        </BankBodyBankAccountsCreate>
+        />
+
+
+
       </div>
     );
   }

@@ -16,19 +16,19 @@ const BankBodyAccountTransaction = (props) => {
     amount = "+$" + props.transaction.amount;
     classN = "text-success";
   }
-  
+
   return (
     <div className="d-flex flex-row row border-top ">
-      <div className="d-flex justify-content-between align-items-center col-2 p-2">
+      <div className="d-flex justify-content-between align-items-center col-1 p-2">
         <img
           className="imgTest"
           src="https://picsum.photos/id/1020/600/400"
           alt=""
         />
       </div>
-      <div className="d-flex justify-content-between align-items-center p-2 col-10">
+      <div className="d-flex justify-content-between align-items-center p-2 col-11">
         <BankBodyPaymentData transaction={props.transaction} />
-        <div className="transactionBankAccountsAccountNumber p-2">
+        <div className="transactionBankAccountsAccountNumber ">
           <BankBodyAmount amount={props.transaction.amount} />
           <button className="btn btn-primary" onClick={goToTransaction}>
             GO TO

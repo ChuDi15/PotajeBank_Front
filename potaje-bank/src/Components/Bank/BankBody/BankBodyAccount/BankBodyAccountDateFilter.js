@@ -9,15 +9,15 @@ const BankBodyAccountDateFilter = (props) => {
   };
 
   return (
-    <div className="expenses-filter">
+    <div className="expenses-filter me-3">
       <div className="expenses-filter__control">
-        <label>Filter by year</label>
-        <select onChange={dropdownChangeHandler} value={props.selected}>
-          <option value="None">None</option>
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option>
+
+        <select className='rounded text-primary border-primary' onChange={dropdownChangeHandler} value={props.selected}>
+          <option value="None">Date: None</option>
+          <option value="2022">Date: 2022</option>
+          <option value="2021">Date: 2021</option>
+          <option value="2020">Date: 2020</option>
+          <option value="2019">Date: 2019</option>
         </select>
       </div>
     </div>

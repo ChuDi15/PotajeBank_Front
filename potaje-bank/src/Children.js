@@ -1,9 +1,9 @@
-import {useState} from "react";
+import { useState } from "react";
 
 import loginRegisterContent from "./Services/Helper";
 function Children(props) {
   let data = props.data;
-  
+
   const [bodyShow, setBodyShow] = useState("Home");
   const [selectedAccount, setSelectedAccount] = useState(null);
   const [selectedTransaction, setSelectedTrasaction] = useState(null);
@@ -16,9 +16,9 @@ function Children(props) {
     selectedTransaction: selectedTransaction,
     setSelectedTrasaction: setSelectedTrasaction,
   };
-  
-  
-  
+
+
+
   const [signed, setSigned] = useState(false);
   const [logging, setLogging] = useState(false);
 

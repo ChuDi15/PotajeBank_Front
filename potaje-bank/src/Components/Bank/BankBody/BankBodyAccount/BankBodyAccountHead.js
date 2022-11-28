@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import BankBodyAccountAmountFilter from './BankBodyAccountAmountFilter';
 import BankBodyAccountDateFilter from './BankBodyAccountDateFilter';
 
 
-const BankBodyAccountHead = (props) => { 
+const BankBodyAccountHead = (props) => {
   return (
-    <div className="d-flex">
+    <div className="d-flex mb-5">
       <BankBodyAccountDateFilter
         selected={props.filteredYear}
         onChangeFilter={props.onChangeDateFilter}

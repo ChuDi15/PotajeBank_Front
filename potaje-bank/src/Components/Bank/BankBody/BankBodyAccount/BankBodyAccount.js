@@ -23,14 +23,14 @@ const BankBodyAccount = (props) => {
       filteredTransactions = filteredTransactions.filter(
         (transaction) => transaction.amount >= Math.abs(filteredAmount)
       );
-    } 
+    }
   } else {
     filteredTransactions = props.account.transactions;
     if (filteredAmount !== "None") {
       filteredTransactions = filteredTransactions.filter(
         (transaction) => transaction.amount >= Math.abs(filteredAmount)
       );
-    } 
+    }
   }
 
 

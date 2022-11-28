@@ -8,15 +8,14 @@ const BankBodyAccountAmountFilter = (props) => {
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
-        <label>Filter by amount</label>
-        <select onChange={dropdownChangeHandler} value={props.selected}>
-          <option value="None">None</option>
-          <option value="10">&gt;10</option>
-          <option value="50">&gt;50</option>
-          <option value="100">&gt;100</option>
-          <option value="500">&gt;500</option>
-          <option value="1000">&gt;1000</option>
-          <option value="5000">&gt;5000</option>
+        <select className="rounded  text-primary border-primary" onChange={dropdownChangeHandler} value={props.selected}>
+          <option value="None">Amount:  None</option>
+          <option value="10">Amount: &gt;10</option>
+          <option value="50">Amount: &gt;50</option>
+          <option value="100">Amount: &gt;100</option>
+          <option value="500">Amount: &gt;500</option>
+          <option value="1000">Amount: &gt;1000</option>
+          <option value="5000">Amount: &gt;5000</option>
         </select>
       </div>
     </div>

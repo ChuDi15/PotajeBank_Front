@@ -4,7 +4,7 @@ import BankBodyAmount from '../BankBodyCommon/BankBodyAmount';
 import BankBodyPaymentData from '../BankBodyCommon/BankBodyPaymentData';
 
 const BankBodyTransaction = (props) => {
-  
+
   return (
     <div className="p-4">
       <p className="text-primary mb-5">Transaction Detail</p>
@@ -20,8 +20,9 @@ const BankBodyTransaction = (props) => {
             src="https://picsum.photos/id/237/600/400"
             alt=""
           />
+          <BankBodyPaymentData transaction={props.transaction} />
+
         </div>
-        <BankBodyPaymentData transaction={props.transaction} />
         <BankBodyAmount amount={props.transaction.amount} />
       </div>
     </div>

@@ -54,62 +54,62 @@ function bodyContent(user, accounts, states) {
   return bodyShow;
 }
 
-function loginRegisterContent(data, states){
-    
-    
-    let bodyShowText = bodyContent(data.user, data.accounts, states.bodyStates);
-    let show = "";
-    
-    
-    if (states.signed) {
-      if (states.navBar) {
-        show = (
-          <div className="row">
-            <div className="col-2 sideBar">
-              <BankSidebar
-                setSign={states.setSigned}
-                setLogging={states.setLogging}
-                user={data.user}
-                setBodyShow={states.bodyStates.setBodyShow}
-              />
-            </div>
-            <div className="col ">
-              <BankHead setNavBar={states.setNavBar} navBar={states.navBar} />
-              <BankBody bodyShow={bodyShowText} />
-            </div>
-          </div>
-        );
-      } else {
-        show = (
-          <div className="row ">
-            <div className="col ">
-              <BankHead setNavBar={states.setNavBar} navBar={states.navBar} />
-              <BankBody bodyShow={bodyShowText} />
-            </div>
-          </div>
-        );
-      }
-    } else if (states.logging) {
+function loginRegisterContent(data, states) {
+
+
+  let bodyShowText = bodyContent(data.user, data.accounts, states.bodyStates);
+  let show = "";
+
+
+  if (states.signed) {
+    if (states.navBar) {
       show = (
-        <div className="App">
-          <Logging
-            setLogging={states.setLogging}
-            logging={states.logging}
-            signedHandler={states.signedHandler}
-          ></Logging>
+        <div className="row">
+          <div className="col-2 sideBar">
+            <BankSidebar
+              setSign={states.setSigned}
+              setLogging={states.setLogging}
+              user={data.user}
+              setBodyShow={states.bodyStates.setBodyShow}
+            />
+          </div>
+          <div className="col ">
+            <BankHead setNavBar={states.setNavBar} navBar={states.navBar} />
+            <BankBody bodyShow={bodyShowText} />
+          </div>
         </div>
       );
     } else {
       show = (
-        <div className="App">
-          <Register
-            setLogging={states.setLogging}
-            logging={states.logging}
-            signedHandler={states.signedHandler}
-          ></Register>
+        <div className="row ">
+          <div className="col ">
+            <BankHead setNavBar={states.setNavBar} navBar={states.navBar} />
+            <BankBody bodyShow={bodyShowText} />
+          </div>
         </div>
       );
     }
-    return show;
+  } else if (states.logging) {
+    show = (
+      <div className="App">
+        <Logging
+          setLogging={states.setLogging}
+          logging={states.logging}
+          signedHandler={states.signedHandler}
+        ></Logging>
+      </div>
+    );
+  } else {
+    show = (
+      <div className="App">
+        <Register
+          setLogging={states.setLogging}
+          logging={states.logging}
+          signedHandler={states.signedHandler}
+        ></Register>
+      </div>
+    );
+  }
+  return show;
 }
 export default loginRegisterContent;

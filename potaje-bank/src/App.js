@@ -75,8 +75,8 @@ const accounts = [
 
 function App() {
   let data = { user: user, accounts: accounts };
-  
-  return <Children data={data}/>;
+
+  return <Children data={data} />;
 }
 
 export default App;
