@@ -24,7 +24,11 @@ const BankBodyBankAccountsElement = (props) => {
         <button className='btn btn-light shadow m-2' onClick={goToAccount}>
           GO TO
         </button>
-        <button className='btn btn-light shadow' onClick={deleteAccount}>
+        <button
+          className='btn btn-light shadow'
+          onClick={deleteAccount}
+          data-test='Delete-Account'
+        >
           DELETE
         </button>
       </div>
